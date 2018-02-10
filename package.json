@@ -5,5 +5,8 @@
   "main": "bin/create.js",
   "repository": "https://github.com/Milanzor/create-steinjs",
   "author": "Milan van As <milanvanas@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
 }
