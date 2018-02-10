@@ -7,7 +7,7 @@ const rimraf = require('rimraf');
 
 
 // Root directory of the project
-const rootPath = path.resolve(__dirname, '..', '..', 'stein-app');
+const rootPath = path.resolve(process.cwd());
 
 const boilerplateRepoUrl = 'https://github.com/Milanzor/stein-boilerplate.git';
 
