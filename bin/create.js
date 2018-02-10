@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
 const path = require('path');
 const {spawnSync} = require('child_process');
 
@@ -8,6 +9,9 @@ const rimraf = require('rimraf');
 
 // Root directory of the project
 const rootPath = path.resolve(process.cwd());
+
+// Make sure our directory is empty
+fs.readdirSync(rootPath).length === 0 || (console.log('Directory is not empty, aborting.') && process.exit(1));
 
 const boilerplateRepoUrl = 'https://github.com/Milanzor/stein-boilerplate.git';
 
