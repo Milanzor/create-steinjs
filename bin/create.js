@@ -31,8 +31,9 @@ console.log('Installing dependencies, this can take a bit');
 spawnSync('yarn', [], {cwd: rootPath});
 
 // Initialize a new git repo
-console.log('Initializing git repo');
-spawnSync('git', ['init'], {cwd: rootPath});
+console.log('Doing a first-time build');
+spawnSync('yarn', ['build:dev'], {cwd: rootPath});
+
 
 // All done!
 console.log('All done, have fun!');
