@@ -1,6 +1,6 @@
 {
   "name": "create-steinjs-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create-app for creating steinjs apps",
   "main": "bin/create.js",
   "repository": "https://github.com/Milanzor/create-steinjs",
