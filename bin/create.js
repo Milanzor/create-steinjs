@@ -7,10 +7,13 @@ const columnify = require('columnify');
 
 const rimraf = require('rimraf');
 
-const workingPath = typeof process.argv[2] !== 'undefined' ? process.argv[2] : process.cwd();
+const workingPath = [process.cwd()];
+if (typeof process.argv[2] !== 'undefined') {
+    workingPath.push(process.argv[2]);
+}
 
 // Root directory of the project
-const rootPath = path.resolve(__dirname, '..', workingPath);
+const rootPath = path.resolve(...workingPath);
 
 if (!fs.existsSync(rootPath)) {
     fs.mkdirSync(rootPath);
